@@ -1,7 +1,14 @@
 import cloth from "../assets/bluehoodie.png"
-import iphone from "../assets/iphone.jpg"
-import cosmetics from "../assets/cosmetics.jpg"
-import headphone from "../assets/headset.jpg"
+import iphone from "../assets/phone.png"
+import cosmetics from "../assets/cosmetics.png"
+import headphone from "../assets/headset.png"
+import electronics from "../assets/amazon.png"
+import jacket from "../assets/jacket.png"
+import jean from "../assets/jean.png"
+import bose from "../assets/hdp.png"
+import belt from "../assets/belt.png"
+import gucci from "../assets/gucci.png"
+import purse from "../assets/bag.png"
 
 export default function HomePage() {
     return (
@@ -53,7 +60,7 @@ export default function HomePage() {
                             </ul>
                         </div>
                         <div className="cat electronics">
-                            <img className="cat-img" src={cosmetics} alt="item" />
+                            <img className="cat-img" src={electronics} alt="item" />
                             <ul>
                                 <h3>electronics</h3>
                                 <p>125 collections</p>
@@ -69,38 +76,30 @@ export default function HomePage() {
                     <button className="explore-btn">explore deals <span className="arrow"><ion-icon name="arrow-forward"></ion-icon></span></button>
                 </section>
                 <section className="recommend-wrapper">
-                    <div className="rec-box">
+                    <div className="rec-box jacket">
                         <button className="lmtd">limited edition</button>
-                        <img className="rec-img" src={cloth} alt="item" />
+                        <img className="rec-img" src={jacket} alt="item" />
+                        <div className="rec-info">
+                            <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
+                            <h4>$320.50 <span className="currency">USD</span></h4>
+                        </div>
+                    </div>
+                    <div className="rec-box jean">
+                        <img className="rec-img" src={jean} alt="item" />
                         <div className="rec-info">
                             <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
                             <h4>$320.50 <span className="currency">USD</span></h4>
                         </div>
                     </div>
                     <div className="rec-box">
-                        <img className="rec-img" src={cloth} alt="item" />
+                        <img className="rec-img" src={bose} alt="item" />
                         <div className="rec-info">
                             <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
                             <h4>$320.50 <span className="currency">USD</span></h4>
                         </div>
                     </div>
-                    <div className="rec-box">
-                        <img className="rec-img" src={cloth} alt="item" />
-                        <div className="rec-info">
-                            <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
-                            <h4>$320.50 <span className="currency">USD</span></h4>
-                        </div>
-                    </div>
-                    <div className="rec-box">
-                        <img className="rec-img" src={cloth} alt="item" />
-                        <div className="rec-info">
-                            <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
-                            <h4>$320.50 <span className="currency">USD</span></h4>
-                        </div>
-                    </div>
-                    <div className="rec-box">
-                        <button className="lmtd">limited edition</button>
-                        <img className="rec-img" src={cloth} alt="item" />
+                    <div className="rec-box belt">
+                        <img className="rec-img" src={belt} alt="item" />
                         <div className="rec-info">
                             <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
                             <h4>$320.50 <span className="currency">USD</span></h4>
@@ -108,12 +107,27 @@ export default function HomePage() {
                     </div>
                     <div className="rec-box">
                         <button className="lmtd">limited edition</button>
-                        <img className="rec-img" src={cloth} alt="item" />
+                        <img className="rec-img" src={gucci} alt="item" />
                         <div className="rec-info">
                             <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
                             <h4>$320.50 <span className="currency">USD</span></h4>
                         </div>
                     </div>
+                    <div className="rec-box purse">
+                        <button className="lmtd">limited edition</button>
+                        <img className="rec-img" src={purse} alt="item" />
+                        <div className="rec-info">
+                            <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
+                            <h4>$320.50 <span className="currency">USD</span></h4>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div className="browse">
+                <section className="section-head">
+                    <h1>recommended <br /> for you</h1>
+                    <article className="section-line"></article>
+                    <button className="explore-btn">explore deals <span className="arrow"><ion-icon name="arrow-forward"></ion-icon></span></button>
                 </section>
             </div>
         </div>

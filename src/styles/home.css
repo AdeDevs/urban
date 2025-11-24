@@ -140,7 +140,7 @@
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-image: url(../assets/hero.jpeg);
     opacity: 0;
     height: 100%;
@@ -152,18 +152,19 @@
 }
 .cloth::before {
     background-image: url(../assets/bluehoodie.png);
+    background-size: 50%;
 }
 .phone::before {
-    background-image: url(../assets/iphone.jpg);
+    background-image: url(../assets/phone.png);
 }
 .accessories::before {
-    background-image: url(../assets/headset.jpg);
+    background-image: url(../assets/headset.png);
 }
 .electronics::before {
-    background-image: url(../assets/headset.jpg);
+    background-image: url(../assets/amazon.png);
 }
 .cosmetics::before {
-    background-image: url(../assets/cosmetics.jpg);
+    background-image: url(../assets/cosmetics.png);
 }
 .cat ul {
     align-self: center;
@@ -181,6 +182,9 @@
 }
 .cat-img {
     width: 30%;
+    height: 100%;
+    object-position: bottom;
+    object-fit: contain;
     opacity: 1;
     align-self: center;
     box-sizing: border-box;
@@ -199,6 +203,10 @@
 }
 .category .accessories {
     grid-column: 3/5;
+}
+.cosmetics .cat-img {
+    width: 50%;
+    min-width: 100px;
 }
 .sub-category {
     grid-column: 1/5;
@@ -274,6 +282,12 @@
 .rec-box .rec-img {
     width: 15vw;
     align-self: center;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.belt .rec-img {
+    width: 90%;
 }
 .rec-info {
     display: flex;
@@ -377,7 +391,10 @@
         grid-column: 3/5;
     }
     .cosmetics .cat-img {
-        width: 100px;
+        width: 130px;
+    }
+    .cloth::before {
+        background-size: 100%;
     }
     .explore-btn {
         padding: 10px;
@@ -400,10 +417,17 @@
         align-items: flex-start;
     }
     .rec-box .rec-img {
-        width: 100%;
+        /* width: 100%; */
+        /* border: 1px solid red; */
         height: 100%;
         object-fit: contain;
         object-position: bottom;
+    }
+    .jean .rec-img, .belt .rec-img {
+        width: 100%;
+    }
+    .jacket .rec-img {
+        width: 70%;
     }
     .rec-info h4 {
         align-self: flex-end;
