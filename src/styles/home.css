@@ -689,7 +689,7 @@
         grid-row: 1;
     }
     .brand img {
-        width: 80%;
+        width: 60%;
     }
     .club img {
         width: 60%;
@@ -704,6 +704,13 @@
     .explore-btn button {
         padding: 5px 12px;
     }
+
+    /* .browse-brands {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sinsay, .be {
+        grid-row: auto;
+    } */
 }
 
 @media screen and (max-width: 350px){
@@ -744,6 +751,9 @@
         height: 100px;
     }
     .browse-brands {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sinsay, .be {
+        grid-row: auto;
     }
 }
