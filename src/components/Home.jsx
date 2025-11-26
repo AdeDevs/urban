@@ -9,6 +9,13 @@ import bose from "../assets/hdp.png"
 import belt from "../assets/belt.png"
 import gucci from "../assets/gucci.png"
 import purse from "../assets/bag.png"
+import wakiki from "../assets/lc.png"
+import sinsay from "../assets/sinsay.png"
+import be from "../assets/be.png"
+import cc from "../assets/cc.png"
+import celio from "../assets/celio.png"
+import hoodie from "../assets/hood.png"
+import shirt from "../assets/shirt.png"
 
 export default function HomePage() {
     return (
@@ -124,10 +131,83 @@ export default function HomePage() {
                 </section>
             </div>
             <div className="browse">
+                <div className="browse-wrap">
+                    <section className="section-head">
+                        <h1>browse <br /> by brand</h1>
+                        <article className="section-line"></article>
+                        <button className="explore-btn">explore deals <span className="arrow"><ion-icon name="arrow-forward"></ion-icon></span></button>
+                    </section>
+                    <section className="browse-mid">
+                        <div className="browse-control"><ion-icon name="caret-back-outline"></ion-icon></div>
+                        <div className="browse-item">
+                            <div className="browse-info">
+                                <div className="mid-img"></div>
+                                <div className="rec-info">
+                                    <h3>Boa Fleece Jacket <span className="stars">4.5(1235)</span></h3>
+                                    <h4>$320.50 <span className="currency">USD</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="browse-control"><ion-icon name="caret-forward-outline"></ion-icon></div>
+                    </section>
+                    <section className="browse-brands">
+                        <div className="brand wakiki">
+                            <img src={wakiki} alt="brand" />
+                        </div>
+                        <div className="brand sinsay">
+                            <img src={sinsay} alt="brand" />
+                        </div>
+                        <div className="brand be">
+                            <img src={be} alt="brand" />
+                        </div>
+                        <div className="brand club">
+                            <img src={cc} alt="brand" />
+                        </div>
+                        <div className="brand celio">
+                            <img src={celio} alt="brand" />
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div className="new">
                 <section className="section-head">
-                    <h1>recommended <br /> for you</h1>
-                    <article className="section-line"></article>
-                    <button className="explore-btn">explore deals <span className="arrow"><ion-icon name="arrow-forward"></ion-icon></span></button>
+                    <h1>new sale for men</h1>
+                    <button className="explore-btn">
+                        <button><ion-icon name="caret-back-outline"></ion-icon></button>
+                        <button><ion-icon name="caret-forward-outline"></ion-icon></button>
+                    </button>
+                </section>
+                <section className="sales">
+                    <div className="sale-item">
+                        <img src={jacket} alt="item" />
+                        <div className="sale-info">
+                            <h2>jacket</h2>
+                            <p>$40</p>
+                        </div>
+                    </div>
+                    <div className="sale-item">
+                        <button className="discount">30% OFF</button>
+                        <img src={jean} alt="item" />
+                        <div className="sale-info">
+                            <h2>jacket</h2>
+                            <p>$40</p>
+                        </div>
+                    </div>
+                    <div className="sale-item">
+                        <img src={hoodie} alt="item" />
+                        <div className="sale-info">
+                            <h2>hoodie</h2>
+                            <p>$40</p>
+                        </div>
+                    </div>
+                    <div className="sale-item">
+                        <button className="discount">30% OFF</button>
+                        <img src={shirt} alt="item" />
+                        <div className="sale-info">
+                            <h2>t-shirt</h2>
+                            <p>$40</p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
