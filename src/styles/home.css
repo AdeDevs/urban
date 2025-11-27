@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     font-family: "Montserrat", sans-serif;
+    background-color: #fff;
 }
 
 .header-wrapper {
@@ -393,7 +394,7 @@
     background-size: cover;
     width: 65px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .browse-info h3 {
     font-size: clamp(11px, 1vw, 9px);
@@ -463,6 +464,8 @@
     }
 }
 
+/* new sales styling starts here*/
+
 .new .sales {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -499,6 +502,131 @@
     font-size: 12px;
 }
 .sale-info p {
+    font-weight: 500;
+}
+
+/* newsletter styling starts here*/
+.newsletter {
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #18181b;
+    color: #fff;
+    background-image: url(../assets/newsletter.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.newsletter h1 {
+    font-size: 35px;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 100px;
+}
+.newsletter p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+.newsletter .news-form {
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    padding: 5px 5px;
+    display: flex;
+}
+.news-form input {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    &:hover::placeholder {
+        color: #fff;
+    }
+    &::placeholder {
+        color: #d5d5d5;
+        transition: all .3s ease-in-out;
+    }
+}
+.news-form button {
+    padding: 10px 20px;
+    font-size: 13px;
+    background-color: #fff;
+    border: none;
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+.newsletter .big {
+    font-size: 15vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: -60px;
+}
+
+/* footer styling starts */
+footer {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+footer .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 60px 0 40px 0;
+}
+.links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: capitalize;
+}
+.links h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.links a {
+    text-underline-offset: 2px;
+    font-size: 13px;
+    text-decoration-thickness: 1px;
+    font-weight: 400;
+    color: #6a6a6a;
+
+    &:hover,
+    &.active {
+        color: #18181b;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: inherit;
+        font-weight: 600;
+    }
+}
+footer .copyright {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: capitalize;
+    color: #6a6a6a;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -555,6 +683,19 @@
     .sinsay {
         grid-row: 1;
     }
+    .newsletter h1 {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .newsletter .big {
+        margin-bottom: -40px;
+    }
+    .newsletter .news-form {
+        width: 70%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -653,7 +794,7 @@
     .rec-info h4 {
         font-size: 11px;
     }
-    .browse, .new {
+    .browse, .new, .newsletter {
         padding: 20px 10px;
     }
     .browse-info .rec-info {
@@ -704,13 +845,49 @@
     .explore-btn button {
         padding: 5px 12px;
     }
-
-    /* .browse-brands {
-        grid-template-columns: repeat(2, 1fr);
+    .newsletter {
+        gap: 15px;
     }
-    .sinsay, .be {
-        grid-row: auto;
-    } */
+    .newsletter .news-form {
+        width: 100%;
+    }
+    .newsletter h1 {
+        margin-top: 30px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .newsletter p {
+        font-size: 12px;
+    }
+    .newsletter .big {
+        margin-bottom: -35px;
+    }
+    footer {
+        padding: 20px 10px;
+    }
+    footer .links {
+        column-gap: 50px;
+        row-gap: 20px;
+        padding: 30px 0 40px 0;
+        flex-wrap: wrap;
+    }
+    .news-form input {
+        font-size: 12px;
+    }
+    .news-form button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    .links h2 {
+        font-size: 14px;
+    }
+    .copyright {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .copyright p:nth-last-child(1) {
+        align-self: flex-end;
+    }
 }
 
 @media screen and (max-width: 350px){
@@ -755,5 +932,8 @@
     }
     .sinsay, .be {
         grid-row: auto;
+    }
+    .newsletter .big {
+        margin-bottom: -30px;
     }
 }

@@ -7,8 +7,8 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
-    /* background-color: #18181b; */
-    background-color: #fd6b41;
+    background-color: #18181b;
+    /* background-color: #fd6b41; */
     scroll-behavior: smooth;
   }
   

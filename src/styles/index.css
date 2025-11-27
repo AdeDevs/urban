@@ -5,6 +5,11 @@ a {
     color: inherit;
     transition: all .3s ease-in-out;
 }
+body.menu-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
 button {
     font-family: inherit;
     transition: all .3s ease-in-out;
@@ -14,6 +19,7 @@ button {
 .nav-box {
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    position: relative;
 }
 
 .offers {
@@ -42,27 +48,30 @@ button {
 
 .offers .offers-content:hover {
     animation-play-state: paused;
-  }
+}
 
 .offers-content span {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 300;
     padding: 0 30px;
-    padding-right: 30px; /* spacing between repeats */
-  }
-  #hide {
+    padding-right: 30px;
+    /* spacing between repeats */
+}
+
+#hide {
     display: none;
-  }
-  
-  @keyframes scroll-seamless {
+}
+
+@keyframes scroll-seamless {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
+
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
-  }
+}
 
 
 .nav-bar {
@@ -93,7 +102,7 @@ button {
     font-size: 13px;
 }
 
-.desk-nav a {
+.desk-nav a, .mobile-nav a {
     text-underline-offset: 2px;
     text-decoration-color: transparent;
     text-decoration-thickness: 1px;
@@ -159,17 +168,94 @@ button {
     }
 }
 
-@media screen and (max-width: 900px) {}
+.toggle {
+    display: none;
+    width: 35px;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    gap: 7px;
+}
+
+.toggle span {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 1px;
+    transition: all .1s ease-in-out;
+    z-index: 1000;
+}
+
+.first.information,
+.second.information {
+    background-color: #f4f2ea;
+}
+
+.mobile-nav .toggle .first {
+    rotate: 45deg;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+}
+
+.mobile-nav .toggle .second {
+    position: absolute;
+    background-color: #fff;
+    rotate: -50deg;
+    top: 0;
+}
+
+.mobile-nav .toggle {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+.mobile-nav {
+    background-color: #18181ba1;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.mobile-nav.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav.show a.active {
+    text-decoration-color: #1c1c1d;
+}
 
 @media screen and (max-width: 800px) {
+    .toggle {
+        display: flex;
+      }
     .offers .offers-content {
         display: inline-block;
         width: fit-content;
         animation: scroll-seamless 20s linear infinite;
     }
+
     #hide {
         display: inline;
     }
+
     .nav-bar {
         padding: 30px 20px;
     }
@@ -179,6 +265,7 @@ button {
     .nav-extras li:nth-child(4) {
         display: none;
     }
+
     .nav-bar .nav-extras {
         gap: 10px;
     }
@@ -192,9 +279,17 @@ button {
         display: flex;
     }
 }
+@media screen and (min-width: 801px) {
+    .toggle, .mobile-nav.show, .mobile-nav {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .logo {
         font-size: 17px;
+    }
+    .toggle {
+        width: 30px;
     }
 }

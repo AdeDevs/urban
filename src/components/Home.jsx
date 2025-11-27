@@ -172,10 +172,10 @@ export default function HomePage() {
             <div className="new">
                 <section className="section-head">
                     <h1>new sale for men</h1>
-                    <button className="explore-btn">
+                    <article className="explore-btn">
                         <button><ion-icon name="caret-back-outline"></ion-icon></button>
                         <button><ion-icon name="caret-forward-outline"></ion-icon></button>
-                    </button>
+                    </article>
                 </section>
                 <section className="sales">
                     <div className="sale-item">
@@ -210,6 +210,51 @@ export default function HomePage() {
                     </div>
                 </section>
             </div>
+            <div className="newsletter">
+                <h1>don't miss out</h1>
+                <p>Subscribe to our newsletter and stay in the know - no spam, just the good stuff.</p>
+                <form className="news-form">
+                    <input type="email" placeholder="Email Address" required />
+                    <button>Subscribe</button>
+                </form>
+                <h3 className="big">smart&nbsp;&nbsp;shop</h3>
+            </div>
+            <footer>
+                <div className="links">
+                    <ul>
+                        <h2>pages</h2>
+                        <li><a href="">shop</a></li>
+                        <li><a href="">collections</a></li>
+                        <li><a href="">blog</a></li>
+                        <li><a href="">about</a></li>
+                    </ul>
+                    <ul>
+                        <h2>category</h2>
+                        <li><a href="">cloths</a></li>
+                        <li><a href="">accessories</a></li>
+                        <li><a href="">electronics</a></li>
+                        <li><a href="">cosmetics</a></li>
+                    </ul>
+                    <ul>
+                        <h2>brands</h2>
+                        <li><a href="">lc wakiki</a></li>
+                        <li><a href="">sinsay</a></li>
+                        <li><a href="">celio</a></li>
+                        <li><a href="">cool club</a></li>
+                    </ul>
+                    <ul>
+                        <h2>socials</h2>
+                        <li><a href="">instagram</a></li>
+                        <li><a href="">tiktok</a></li>
+                        <li><a href="">x</a></li>
+                        <li><a href="">facebook</a></li>
+                    </ul>
+                </div>
+                <div className="copyright">
+                    <p>privacy policy</p>
+                    <p>copyright &copy; smart shop, all rights reserved.</p>
+                </div>
+            </footer>
         </div>
     )
 }
