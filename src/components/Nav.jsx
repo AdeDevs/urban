@@ -13,11 +13,12 @@ export default function NavBar() {
     }
     useEffect(() => {
         if (showMenu) {
-            document.body.classList.add("menu-open");
+            document.body.classList.add("no-scroll");
         } else {
-            document.body.classList.remove("menu-open");
+            document.body.classList.remove("no-scroll");
         }
     }, [showMenu]);
+
     return (
         <div>
             <nav className="nav-box">

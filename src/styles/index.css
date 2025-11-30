@@ -5,7 +5,8 @@ a {
     color: inherit;
     transition: all .3s ease-in-out;
 }
-body.menu-open {
+
+.no-scroll{
     overflow: hidden;
     height: 100vh;
 }
